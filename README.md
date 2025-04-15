@@ -1,14 +1,30 @@
-# celene
+# Celene - Gestión de Entrega de Medicamentos en Hospitales
+Celene es una aplicación web diseñada para mejorar y optimizar el proceso de entrega de medicamentos preparados en farmacia hacia las distintas ubicaciones dentro de un hospital (como enfermería o salas de pacientes). Este sistema permite una mejor comunicación entre farmacia, celadores y personal de enfermería, proporcionando visibilidad en tiempo real del estado de cada pedido de medicación.
 
-# React + Vite
+# ¿Cómo funciona?
+#### Registro del pedido:
+El personal de farmacia introduce en la app el nombre del medicamento, su ubicación de destino y se marca automáticamente como "En proceso".
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#### Medicamento listo para recoger:
+Una vez preparado, la farmacia actualiza el estado a "Listo para recoger", lo que envía una notificación al celador.
 
-Currently, two official plugins are available:
+#### Recogida por el celador:
+El celador marca el medicamento como "De camino". Farmacia puede añadir una verificación opcional de recogida para mayor seguridad.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#### Entrega en enfermería:
+Al llegar al control de enfermería, tanto el celador como las enfermeras confirman la "Entrega" y el pedido cambia a "Recibido".
 
-## Expanding the ESLint configuration
+#### Administración al paciente:
+Finalmente, cuando las enfermeras entregan el medicamento al paciente, lo marcan como "Recibido por paciente".
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Tecnologías utilizadas
+Frontend: React + Vite
+Backend: Supabase (Base de datos PostgreSQL + API REST)
+Control de versiones: Git & GitHub
+
+# Equipo
+Este proyecto ha sido desarrollado por alumos de Ingeniería Biomédica de la Universidad Rey Juan Carlos:
+
+- Blanca Andreo León
+- Laura María Lagartera Labrador
+- Manuel Guerrero Sancho
